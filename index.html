@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap" rel="stylesheet">
+    <script src="https://www.googlecom/recaptcha/api.js" async defer></script>
+    <link rel="icon" href="img/logo.png">
+    <title>Orange -500</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+        *
+        {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: 'Quicksand', sans-serif;
+          color: #fff;
+        }
+        body 
+        {
+          background: #000;
+          color: #000;
+        }
+        .signin
+        {
+            width: 290px;
+            background: #222;
+            padding: 40px;
+            border-radius: 4px;
+            box-shadow: 0 15px 35px rgba(0,0,0,9);
+            margin-top: 85px;
+        }
+        .signin .content 
+        {
+          position: relative;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          gap: 40px;
+        }
+        .signin .content h2 
+        {
+            background: none;
+            border:none;
+            color: #EAEAEA;
+            text-align: center;
+            padding-left: 0px;
+            margin-top: 0px;
+            font-family: 'Quicksand', sans-serif;
+            text-transform: uppercase;
+            font-size: 20px;
+        }
+        span
+        {
+            background: none;
+            border: none;
+            color: #cb6d27;
+            text-align: center;
+            padding-left: 0px;
+            margin-top: 0px;
+            font-family: 'Quicksand', sans-serif;
+            text-transform: uppercase;
+        }
+        .signin .content .form 
+        {
+          width: 110%;
+          display: flex;
+          flex-direction: column;
+          gap: 25px;
+        }
+        .signin .content .form .inputBox
+        {
+          position: relative;
+          width: 100%;
+        }
+        .signin .content .form .inputBox input 
+        {
+          position: relative;
+          width: 100%;
+          background: #333;
+          border: none;
+          outline: none;
+          padding: 25px 10px 7.5px;
+          border-radius: 4px;
+          color: #fff;
+          font-weight: 500;
+          font-size: 1em;
+        }
+        .signin .content .form .inputBox i 
+        {
+          position: absolute;
+          left: 0;
+          padding: 15px 10px;
+          font-style: normal;
+          color: #aaa;
+          transition: 0.5s;
+          pointer-events: none;
+        }
+        .signin .content .form .inputBox input:focus ~ i,
+        .signin .content .form .inputBox input:valid ~ i
+        {
+          transform: translateY(-7.5px);
+          font-size: 0.8em;
+          color: #fff;
+        }
+        .signin .content .form .links 
+        {
+          position: relative;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+        }
+        .signin .content .form .links a 
+        {
+          color: #fff;
+          text-decoration: none;
+        }
+        .signin .content .form .inputBox input[type="submit"]
+        {
+            padding: 10px;
+            background: #cb6d27;
+            color: #fff;
+            font-weight: 600;
+            font-size: 1.35em;
+            letter-spacing: 0.05em;
+            cursor: pointer;
+        }
+        input[type="submit"]:active
+        {
+          opacity: 0.6;
+        }
+        .error
+        {
+            color: #ffffff;
+            background: #000;
+            width: 200px;
+            margin-top: 30px;
+            padding: 5px;
+        }
+        .success
+        {
+            color: #ffffff;
+            background: #3ea94c;
+            width: 285px;
+            margin-top: 30px;
+            padding: 12px;
+        }
+       .message {
+            color: #ff000a;
+            width: 100%;
+            margin-top: 30px;
+            padding: 12px;
+            text-align: center;
+        }
+        .message.success {
+            background: #2bff2e;
+        }
+        .message.error {
+            background: #000;
+        }
+  
+        
+.telegram-icon {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+}
+  .telegram-text {
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+    body {
+  background: url('https://i.pinimg.com/originals/f4/3e/2b/f43e2b2e7dcb3e0d8dfbdff6f445ace1.gif') no-repeat center center fixed;
+  background-size: cover;
+  color: #000 ;
+}
+
+.signin {
+  background: rgba(0, 0, 0, 0.9);
+  /* Other styles for the sign-in container */
+      }
+    </style>
+</head>
+
+<body>
+
+      <div class="message"></div>
+
+    <script>
+        var message = '{{ message }}';
+        if (message) {
+            var messageDiv = document.querySelector('.message');
+            messageDiv.textContent = message;
+            messageDiv.classList.add(message.includes('❤️‍🔥') ? 'success' : 'error');
+        }
+    </script>
+
+    <center>
+        <form method="POST">
+           <div class="signin"> 
+            <div class="content"> 
+             <h2><span>500ميجا اورنج</span> </h2> 
+             <div class="form"> 
+              <div class="inputBox"> 
+               <input type="number" required name="number"> <i>اكتب رقمك </i> 
+              </div> 
+              <div class="inputBox"> 
+               <input type="password" required name="password"> <i>اكتب باسورد تطبيق ماي اورنج</i> 
+              </div>
+              <div class="inputBox"> 
+               <input type="submit" value="أضغط هنا للاضافة" name="submit">
+                by wiretun 
+              </div> 
+             </div> 
+            </div> 
+           </div>
+        </form>
+       <div 
+ <div class="telegram-icon">
+  <div class="circle-container">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+  </div>
+  <a href="https://t.me/Wiretuneg">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Telegram_2019_Logo.svg" alt="Telegram Icon">
+    
+  </a>  
+       </div>
+           <span class="telegram-text">Ahmed⚓️xc🇪🇬</span>
+    </center>
+   
+</body>
+</html>
